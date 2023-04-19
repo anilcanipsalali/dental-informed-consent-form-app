@@ -187,6 +187,7 @@
   display: flex;
   font-size: 16px;
   border-radius: 8px;
+  text-decoration: none !important;
 }
 
 .form-submit-btn:hover {

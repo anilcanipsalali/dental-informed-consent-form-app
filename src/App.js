@@ -11,8 +11,6 @@ import { useEffect, useState } from "react";
 import Submit from "./components/Submit";
 
 function App() {
-  const [signature, setSignature] = useState("");
-
   const [patient, setPatient] = useState({
     name: "",
     gender: "",
@@ -49,11 +47,13 @@ function App() {
     signature: true,
   });
 
+  //TEST PATIENT
   useEffect(() => {
     //console.log("Patient:")
-    console.log(patient)
+    //onsole.log(patient);
   }, [patient]);
 
+  //TEST ERRORS
   useEffect(() => {
     //console.log("Errors:")
     //console.log(errors)
