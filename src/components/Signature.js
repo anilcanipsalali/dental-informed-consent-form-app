@@ -32,24 +32,20 @@ const Signature = ({ setPatient, setErrors }) => {
   return (
     <>
       <FormHeader text={"Signature"} />
-      <li className="form-line">
-        <FormLabel label={"Patient/Parent/Guardian Signature"} />
-        <div className="form-single-column">
-          <div
-            className="form-input-subcontainer"
-            style={{
-              borderStyle: "solid",
-              borderColor: "black",
-              borderWidth: "2.5px",
-            }}
-          >
+      <li className="w-full flex pl-9 pr-0 pb-3 pt-1 pb-3 pt-1">
+        <FormLabel label={"Patient/Parent/Guardian Signature:"} />
+        <div className="w-auto flex ml-20">
+          <div className="inline-block border border-black rounded-xl">
             <ReactSignatureCanvas
               ref={signaturePad}
               onEnd={saveSignature}
               penColor="black"
-              canvasProps={{ width: 400, height: 200, className: "sigCanvas" }}
+              canvasProps={{ className: "w-full" }}
             />
-            <button className="btn" onClick={clearSignature}>
+            <button
+              className="border-0 text-[13px] rounded-xl ml-1 mb-1 pt-1 pr-3 pl-3 pb-2 cursor-pointer hover:shadow-[#000000] hover:bg-gray-100"
+              onClick={clearSignature}
+            >
               Clear
             </button>
           </div>

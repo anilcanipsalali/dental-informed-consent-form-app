@@ -43,14 +43,15 @@ const DentalProcedureDetails = ({ setPatient }) => {
   return (
     <>
       <FormHeader text={"Dental Procedure Details"} />
-      <li className="form-line-checkbox">
-        <FormLabel label={"Type of Dental Procedure"} />
+      <li className="w-full inline-flex pl-9 pr-2 pb-3 pt-1 pb-3 pt-1">
+        <FormLabel label={"Type of Dental Procedure:"} />
         <div>
-          <div className="form-single-column" role={"group"}>
-            <span className="form-input-subcontainer">
+          <div className="w-full flex !items-start" role={"group"}>
+            <span className="inline-block pt-0 pr-2 pb-0 pl-2">
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Tooth Extraction"
                   onChange={(e) =>
@@ -60,11 +61,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Tooth Extraction</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Tooth Extraction
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Grafting"
                   onChange={(e) =>
@@ -74,11 +78,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Grafting</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Grafting
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Restoration"
                   onChange={(e) =>
@@ -88,11 +95,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Restoration</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Restoration
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Cosmetic Dentistry"
                   onChange={(e) =>
@@ -102,11 +112,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Cosmetic Dentistry</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Cosmetic Dentistry
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Implants"
                   onChange={(e) =>
@@ -116,11 +129,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Implants</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Implants
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Prosthetics"
                   onChange={(e) =>
@@ -130,11 +146,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Prosthetics</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Prosthetics
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Oral Sedation"
                   onChange={(e) =>
@@ -144,11 +163,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Oral Sedation</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Oral Sedation
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Treatment"
                   onChange={(e) =>
@@ -158,11 +180,14 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Treatment</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Treatment
+                </label>
               </div>
               <div>
                 <input
                   type={"radio"}
+                  className="w-4 h-4"
                   name="DentalProcedure"
                   value="Root Planing"
                   onChange={(e) =>
@@ -172,56 +197,64 @@ const DentalProcedureDetails = ({ setPatient }) => {
                     }))
                   }
                 />
-                <label>Root Planing</label>
+                <label className="w-full py-3 ml-2 text-sm font-medium text-[#312547]">
+                  Root Planing
+                </label>
               </div>
             </span>
           </div>
         </div>
       </li>
-      <li className="form-line">
+      <li className="w-full inline-flex pl-9 pr-2 pb-3 pt-1 pb-3 pt-1">
         <FormLabel label={"Do you have any allergies?"} />
         <div>
-          <span className="form-input-subcontainer">
+          <span className="inline-block pt-0 pr-0 pb-0 pl-3">
             <textarea
+              className="block p-2.5 w-full text-sm rounded-lg border border-gray-800"
               cols={55}
               rows={6}
+              maxLength={300}
               onBlur={(e) => handleAllergies(e.target.value)}
             />
-            <h1 className="form-sublabel-bottom">
+            <h1 className="text-[13px] text-[#6F6F6F] font-lighter font-mako mt-1 mr-0 mb-1 ml-1">
               If yes, then please specify it on the field above.
             </h1>
           </span>
         </div>
       </li>
-      <li className="form-line">
+      <li className="w-full inline-flex pl-9 pr-2 pb-3 pt-1 pb-3 pt-1">
         <FormLabel label={"Are you currently taking any medications?"} />
         <div>
-          <span className="form-input-subcontainer">
+          <span className="inline-block pt-0 pr-1 pb-0 pl-3">
             <textarea
+              className="block p-2.5 w-full text-sm rounded-lg border border-gray-800"
               cols={55}
               rows={6}
+              maxLength={300}
               onBlur={(e) => handleMedications(e.target.value)}
             />
-            <h1 className="form-sublabel-bottom">
+            <h1 className="text-[13px] text-[#6F6F6F] font-lighter font-mako mt-1 mr-0 mb-1 ml-1">
               If yes, then please specify it on the field above.
             </h1>
           </span>
         </div>
       </li>
-      <li className="form-line">
+      <li className="w-full inline-flex pl-9 pr-2 pb-3 pt-1 pb-3 pt-1">
         <FormLabel
           label={
             "Do you have any medical conditions that we should be aware of? (Communicable disease, cardiovascular problems, diabetes, etc.)"
           }
         />
         <div>
-          <span className="form-input-subcontainer">
+          <span className="inline-block pt-0 pr-1 pb-0 pl-3">
             <textarea
+              className="block p-2.5 w-full text-sm rounded-lg border border-gray-800"
               cols={55}
               rows={6}
+              maxLength={300}
               onBlur={(e) => handleMedicalConditions(e.target.value)}
             />
-            <h1 className="form-sublabel-bottom">
+            <h1 className="text-[13px] text-[#6F6F6F] font-lighter font-mako mt-1 mr-0 mb-1 ml-1">
               If yes, then please specify it on the field above.
             </h1>
           </span>

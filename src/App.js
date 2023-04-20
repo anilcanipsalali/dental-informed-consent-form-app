@@ -50,7 +50,7 @@ function App() {
   //TEST PATIENT
   useEffect(() => {
     //console.log("Patient:")
-    //onsole.log(patient);
+    //console.log(patient);
   }, [patient]);
 
   //TEST ERRORS
@@ -60,15 +60,15 @@ function App() {
   }, [errors]);
 
   return (
-    <div className="main">
+    <div className="bg-neutral-800 w-full pb-5 pt-5 h-full h-full">
       <FormImage
         image={
           "https://www.jotform.com/uploads/VanessaDavid/form_files/dental-care-logo.5d23b4e54ca9a5.61850062.png"
         }
       />
-      <div className="form">
+      <div className="container mx-auto px-4 w-4/12 center bg-white rounded-xl">
         <FormHeader
-          className={"form-header"}
+          className={"text-4xl text-[#312547 text-center font-mako mt-3 mr-4 mb-3 ml-9 pt-6 pb-6"}
           text={"Dental Informed Consent Form"}
         />
         <FormReagent />
@@ -85,7 +85,7 @@ function App() {
           />
         ) : null}
         <DentalProcedureDetails setPatient={setPatient} />
-        <AcknowledgmentAndWaiver setPatient={setPatient} />
+        <AcknowledgmentAndWaiver patient={patient} setPatient={setPatient} />
         <Signature setPatient={setPatient} setErrors={setErrors} />
         <Submit errors={errors} patient={patient} />
       </div>
